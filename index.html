@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor Game</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+<div class="head">
+  <button class="reset-button" onclick="
+
+  score.win = 0,
+  score.losses = 0,
+  score.tie = 0
+
+  localStorage.removeItem('score');
+
+  updateScoreElem();
+
+"><span class="reset-icon"><i class='bx bx-reset'></i></span>Reset</button>
+</div>
+
+  <p class="js-score scoreStyles">
+    <span class="youStyle">You</span>
+    <span class="youScore"></span> : 
+    <span class="botScore"></span>
+    <span class="botStyle">Bot</span>
+  </p>
+
+  <div class="playerChoice">
+
+  <button class="choiceButtonStyle space" onclick="
+
+  showResult('rock');
+
+  "><img src="imges/rock.jpg" class="symbols"></button>
+
+  <button class="choiceButtonStyle space" onclick="
+
+    showResult('paper');
+
+  "><img src="imges/paper.jpg" class="symbols"></button>
+
+  <button class="choiceButtonStyle" onclick="
+
+    showResult('scissors');
+
+  "><img src="imges/scissor.jpg" class="symbols"></button>
+</div>
+
+<p class="js-result resultStyle"></p>
+
+<p class="js-moves botMoveStyle"></p>
+
+
+  <script src="index.js">
+  </script>
+</body>
+</html> 
